@@ -16,7 +16,7 @@ cd waybar-config
 mkdir -p ~/.config/waybar
 ```
 
-> Choose the style by screenshots copy-paste that directory,
+> Choose the style you liked in screenshots and copy-paste that directory,
 > example:
 
 ```bash
