@@ -19,6 +19,13 @@
     "tooltip-format": "wlogout"
   },
 
+  "custom/wallpaper-changer": {
+    "format": "󰸉",
+    "on-click": "~/.local/bin/wallpaper-change.sh",
+    "tooltip": true,
+    "tooltip-format": "Click to change wallpaper"
+  },
+
   "custom/cpu": {
     "exec": "top -bn1 | grep 'Cpu(s)' | awk '{print $2+$4\"%\"}'",
     "interval": 3,
@@ -34,7 +41,7 @@
 
   "custom/weather": {
     "tooltip": true,
-    "format": "{} ",
+    "format": "{}",
     "interval": 3600,
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
     "return-type": "json"
@@ -60,6 +67,7 @@
     "clock",
     "hyprland/workspaces",
     "custom/weather",
+    "custom/wallpaper-changer",
     "custom/updates",
     "backlight",
     "pulseaudio",
@@ -71,7 +79,7 @@
   ],
 
   "clock": {
-    "format": "  󰥔 {:%I:%M %p}",
+    "format": "󰥔 {:%I:%M %p}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
         "mode": "month",
@@ -99,6 +107,7 @@
     "format-linked": "󰈀  {ifname} {No IP}",
     "format-disconnected": " Disconnected",
     "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "on-click": "nm-applet"
   },
 
   "backlight": {
@@ -122,8 +131,8 @@
     ],
     "states": {
       "good": 85,
-      "warning": 35,
-      "critical": 15
+      "warning": 40,
+      "critical": 20
     }
   }
 }

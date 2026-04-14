@@ -40,6 +40,7 @@ window#waybar {
     color: @black;
 }
 
+#custom-wallpaper-changer,
 #tray,
 #backlight,
 #clock,
@@ -63,6 +64,7 @@ window#waybar {
 /* modules colors */
 #clock { color: #67a9f0; }
 #custom-weather { color: #bfbfbf }
+#custom-wallpaper-changer { color: #bfbfbf; }
 #custom-updates { color: @cyan; }
 #backlight { color: @yellow; }
 #pulseaudio { color: @blue; }
@@ -76,7 +78,7 @@ window#waybar {
 
 tooltip {
   background: rgba(27, 27, 36, 1);
-  border: 1px solid @blue;
+  border: 1px solid #89b4fa;
   border-radius: 8px;
 }
 
