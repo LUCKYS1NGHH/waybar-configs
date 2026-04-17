@@ -1,0 +1,153 @@
+{
+  "position": "top",
+  "gtk-layer-shell": true,
+  "exclusive": true,
+  "height": 20,
+  "margin-top": 10,
+
+  "custom/updates": {
+    "exec": "checkupdates | wc -l",
+    "interval": 620,
+    "format": "󰏖 {}",
+    "tooltip-format": "{} updates available"
+  },
+
+  "custom/wlogout": {
+    "format": "  ",
+    "on-click": "wlogout",
+    "tooltip": true,
+    "tooltip-format": "wlogout"
+  },
+
+  "custom/wallpaper-changer": {
+    "format": "󰸉",
+    "on-click": "~/.local/bin/wallpaper-change.sh",
+    "tooltip": true,
+    "tooltip-format": "Click to change wallpaper"
+  },
+
+  "custom/cpu": {
+    "exec": "top -bn1 | grep 'Cpu(s)' | awk '{print $2+$4\"%\"}'",
+    "interval": 3,
+    "format": "  {}"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+      "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "󱧶",
+      "5": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 3
+    }
+  },
+
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 3600,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+
+  "custom/swaync": {
+    "format": "{icon}{text}",
+    "format-icons": {
+        "notification": "󰂚 ",
+        "none": "󰂜 ",
+        "dnd-notification": "󰂛 ",
+        "dnd-none": "󰂛 "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "backlight",
+    "custom/weather",
+    "custom/updates",
+    "custom/wallpaper-changer",
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray",
+    "custom/swaync",
+    "custom/wlogout"
+  ],
+
+  "modules-right": [
+    "clock"
+  ],
+
+  "clock": {
+    "format": "󰥔 {:%H:%M %d %b %y}",
+    "tooltip-format": "<tt><span font='FiraCode 10'><small>{calendar}</small></span></tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "weeks-pos": "right",
+        "format": {
+            "today": "<span color='#ff4e4e'><b>{}</b></span>"
+        }
+    }
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "  muted",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰤢  {}",
+    "format-ethernet": "󰈀  {ipaddr}",
+    "exec": "iwgetid -r",
+    "format-linked": "󰈀  {ifname} {No IP}",
+    "format-disconnected": " Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "on-click": "nm-applet"
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "   {percent}%",
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +2%",
+    "on-scroll-down": "brightnessctl set 2%-",
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱐋 {capacity}%",
+    "format-full": "  100%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "states": {
+      "good": 85,
+      "warning": 40,
+      "critical": 20
+    }
+  }
+}
