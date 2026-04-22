@@ -20,7 +20,7 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 ## Setup 
 ```bash
 git clone https://github.com/LUCKYS1NGHH/waybar-configs.git
-cd waybar-config
+cd waybar-configs
 mkdir -p ~/.config/waybar
 ```
 
