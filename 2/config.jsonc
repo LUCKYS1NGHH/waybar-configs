@@ -113,6 +113,7 @@
     "format-wifi": "󰤢 {}",
     "format-ethernet": "󰈀 {ipaddr}",
     "exec": "iwgetid -r",
+    "on-click": "nm-applet",
     "format-linked": "󰈀 {ifname} {No IP}",
     "format-disconnected": " Disconnected",
     "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
