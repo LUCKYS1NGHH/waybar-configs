@@ -51,13 +51,9 @@ window#waybar {
 #custom-swaync,
 #custom-wlogout {
     padding: 0 12px;
-    margin: 4px 8px;        /* this creates the gap */
+    margin: 3px 5px;        /* this creates the gap */
     background: #1e293b;    /* module box color */
-    border-radius: 8px;    /* rounded box */
-}
-
-#custom-arch {
-  color: #5d98fc;
+    border-radius: 10px;    /* rounded box */
 }
 
 #clock {
