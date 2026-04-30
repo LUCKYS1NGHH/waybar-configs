@@ -46,6 +46,7 @@ window#waybar {
 #custom-cpu,
 #custom-weather,
 #custom-updates,
+#custom-wallpaper-changer,
 #tray,
 #backlight,
 #pulseaudio,
@@ -65,6 +66,7 @@ window#waybar {
 #custom-cpu { color: @cpu-fg; }
 
 #custom-updates { color: @updates-fg; }
+#custom-wallpaper-changer { color: @wp-changer-fg;  }
 #backlight { color: @brightness-fg; }
 #pulseaudio { color: @audio-fg; }
 #network { color: @network-fg; }

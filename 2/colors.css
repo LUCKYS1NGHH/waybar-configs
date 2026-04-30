@@ -30,6 +30,8 @@
 
 @define-color wlogout-fg #bfbfbf;
 
+@define-color wp-changer-fg #bfbfbf;
+
 @define-color tooltip-bg #1a1a1a;
 @define-color tooltip-fg #cacfd0;
 @define-color tooltip-border #5c85e6; 

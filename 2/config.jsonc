@@ -21,6 +21,13 @@
     "tooltip-format": "wlogout"
   },
 
+  "custom/wallpaper-changer": {
+    "format": "󰸉",
+    "on-click": "~/.config/waybar/scripts/wallpaper-change.sh",
+    "tooltip": true,
+    "tooltip-format": "Click to change wallpaper"
+  },
+
   "custom/weather": {
     "tooltip": true,
     "format": "{}",
@@ -62,7 +69,8 @@
     "clock",
     "custom/cpu",
     "custom/weather",
-    "custom/updates"
+    "custom/updates",
+    "custom/wallpaper-changer"
   ],
 
   "modules-center": [
