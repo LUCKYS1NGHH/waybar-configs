@@ -1,5 +1,5 @@
 * {
-    font-family: "FiraCode Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
+    font-family: "FiraCode Nerd Font Propo", "JetBrainsMono Nerd Font Propo", sans-serif;
     font-size: 10px;
     font-weight: 600;
     border: none;
@@ -39,19 +39,20 @@ window#waybar {
 }
 
 #custom-arch,
-#backlight,
 #clock,
+#custom-cpu,
+#custom-updates,
+#backlight,
+#tray,
 #pulseaudio,
 #network,
 #battery,
-#custom-cpu,
 #custom-weather,
-#custom-updates,
 #custom-wlogout {
     padding: 0 12px;
-    margin: 4px 6px;        /* this creates the gap */
+    margin: 4px 8px;        /* this creates the gap */
     background: #1e293b;    /* module box color */
-    border-radius: 10px;    /* rounded box */
+    border-radius: 8px;    /* rounded box */
 }
 
 #custom-arch {

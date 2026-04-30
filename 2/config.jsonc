@@ -23,7 +23,7 @@
 
   "custom/weather": {
     "tooltip": true,
-    "format": "{} ",
+    "format": "{}",
     "interval": 3600,
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
     "return-type": "json"
@@ -31,8 +31,8 @@
 
   "custom/cpu": {
     "exec": "top -bn1 | grep 'Cpu(s)' | awk '{print $2+$4\"%\"}'",
-    "interval": 3,
-    "format": "  {}"
+    "interval": 2,
+    "format": " {}"
   },
 
   "modules-left": [
@@ -47,8 +47,8 @@
   ],
 
   "modules-right": [
-    "backlight",
     "tray",
+    "backlight",
     "pulseaudio",
     "network",
     "battery",
@@ -56,7 +56,7 @@
   ],
 
   "clock": {
-    "format": "󰥔 {:%I:%M %p}",
+    "format": "󰥔 {:%H:%M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
         "mode": "month",
@@ -69,7 +69,7 @@
   },
 
   "pulseaudio": {
-    "format": "  {volume}%",
+    "format": " {volume}%",
     "format-muted": "  muted",
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
@@ -78,26 +78,26 @@
   },
 
   "network": {
-    "format-wifi": "󰤢  {}",
-    "format-ethernet": "󰈀  {ipaddr}",
+    "format-wifi": "󰤢 {}",
+    "format-ethernet": "󰈀 {ipaddr}",
     "exec": "iwgetid -r",
-    "format-linked": "󰈀  {ifname} {No IP}",
+    "format-linked": "󰈀 {ifname} {No IP}",
     "format-disconnected": " Disconnected",
     "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
   },
 
   "backlight": {
     "device": "intel_backlight",
-    "format": "  {percent}%",
+    "format": " {percent}%",
     "tooltip": false,
     "on-scroll-up": "brightnessctl set +2%",
     "on-scroll-down": "brightnessctl set 2%-",
   },
 
   "battery": {
-    "format": "{icon} {capacity}%",
+    "format": "{icon}{capacity}%",
     "format-charging": "󱐋 {capacity}%",
-    "format-full": "  100%",
+    "format-full": " 100%",
     "format-icons": [
       " ",
       " ",
