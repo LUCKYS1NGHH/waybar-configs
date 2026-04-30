@@ -35,7 +35,13 @@
     "format": " {}"
   },
 
+  "custom/distro-icon": {
+    "format": "󰣇",
+    "tooltip-format": "Arch Linux (Hyprland)"
+  },
+
   "modules-left": [
+    "custom/distro-icon",
     "clock",
     "custom/cpu",
     "custom/weather",
