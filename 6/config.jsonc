@@ -1,0 +1,165 @@
+{
+  "position": "top",
+  "gtk-layer-shell": true,
+  "exclusive": true,
+  "height": 30,
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "custom/arch": {
+     "format": "",
+      "tooltip-format": "Arch Linux (Hyprland)"
+  },
+
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "weeks-pos": "left",
+        "format": {
+            "today": "<span color='#ff5555'><b>{}</b></span>"
+        }
+    }
+  },
+
+  "mpris": {
+    "format": "{status_icon} {artist} - {title}",
+    "format-paused": "{status_icon} {title}",
+    "dynamic-order": ["title", "artist", "album", "position", "length"],
+    "max-length": 45,
+    "tooltip": true,
+    "tooltip-format": "[{status}] {title} by {artist} ({album}) [{position} of {length}]",
+    "status-icons": {
+      "playing": "",
+      "paused": ""
+    },
+    "ignored-players": ["mpv", "vlc"]
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "*": 3
+    },
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "󱧶",
+      "5": "",
+      "active": "",
+    },
+  },
+
+  "custom/updates": {
+    "exec": "checkupdates | wc -l",
+    "interval": 620,
+    "format": "󰏖 {}",
+    "tooltip-format": "{} updates available"
+  },
+
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 3600,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": " {percent}%",
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +2%",
+    "on-scroll-down": "brightnessctl set 2%-",
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰤢 {}",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "exec": "iwgetid -r",
+    "format-linked": "󰈀 {ifname} {No IP}",
+    "format-disconnected": " Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "on-click": "nm-applet"
+  },
+
+  "battery": {
+    "format": "{icon}{capacity}%",
+    "format-charging": "󱐋 {capacity}%",
+    "format-full": " 100%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "states": {
+      "good": 85,
+      "warning": 30,
+      "critical": 15
+    }
+  },
+
+  "custom/swaync": {
+    "format": "{icon}{text}",
+    "format-icons": {
+        "notification": "󰂚 ",
+        "none": "󰂜 ",
+        "dnd-notification": "󰂛 ",
+        "dnd-none": "󰂛 ",
+        "inhibited-notification": "󰂚 ",
+        "inhibited-none": "󰂜 "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click-middle": "swaync-client -C -sw",
+    "tooltip": true,
+    "escape": true
+  },
+
+  "custom/wlogout": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": true,
+    "tooltip-format": "wlogout"
+  },
+
+  "modules-left": [
+    "custom/arch",
+    "clock",
+    "mpris",
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/updates",
+    "custom/weather",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "battery",
+    "custom/swaync",
+    "custom/wlogout"
+  ],
+}

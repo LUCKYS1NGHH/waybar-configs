@@ -1,0 +1,38 @@
+@define-color bg rgba(50,50,50,0.8);
+
+@define-color workspace-button-bg rgba(50,50,50,0.8);
+@define-color workspace-button-fg #9f9f9f;
+@define-color workspace-button-hover-bg #6f6f6f;
+@define-color workspace-button-hover-fg #cacaca;
+@define-color workspace-button-active-bg #c8c8c8;
+@define-color workspace-button-active-fg #363636;
+
+@define-color audio-fg #5c85e7;
+@define-color audio-muted-fg #e6605c;
+
+@define-color brightness-fg #e6c15c;
+
+@define-color battery-fg #7cdb7b;
+@define-color battery-fg-warning #f9d175;
+@define-color battery-fg-critical #f5524d;
+
+@define-color updates-fg #7accdf;
+
+@define-color clock-fg #67a9f1;
+
+@define-color swaync-fg #ebba8d;
+
+@define-color network-fg #cf76c6;
+
+@define-color arch-logo #ffffff;
+
+@define-color weather-text #c7c7c7;
+
+@define-color mpris-fg #bababa;
+@define-color mpris-fg-paused #9ea9b4;
+
+@define-color wlogout-fg #c7c7c7;
+
+@define-color tooltip-bg #1a1a1a;
+@define-color tooltip-fg #cacfd0;
+@define-color tooltip-border #5c85e6;

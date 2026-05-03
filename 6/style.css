@@ -1,0 +1,95 @@
+@import 'colors.css';
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "FiraCode Nerd Font Propo", "Noto Sans CJK TC Medium", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+    margin: 5px 5px 0 5px;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 1px;
+    background: @bg;
+    border-radius: 7px;
+    margin: 2px;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    border-radius: 5px;
+    background: none;
+    color: @workspace-button-fg;
+    transition: 0.20s;
+}
+
+#workspaces button.active {
+    background: @workspace-button-active-bg;
+    color: @workspace-button-active-fg;
+    margin: 2px 1.97px;
+    padding: 0 12px;
+}
+
+#workspaces button:hover {
+    background: @workspace-button-hover-bg;
+    color: @workspace-button-hover-fg;
+    padding: 0 10px;
+    margin: 2px 1.97px;
+}
+
+#custom-arch,
+#clock,
+#mpris,
+#tray,
+#custom-updates,
+#custom-weather,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#custom-wlogout,
+#custom-swaync {
+  padding: 0 12px;
+  background: @bg;    /* module box color */
+  border-radius: 7px;    /* rounded box */
+  margin: 2px;
+}
+
+/* modules colors */
+#clock { color: @clock-fg; }
+#custom-weather { color: @weather-text; }
+#custom-wallpaper-changer { color: @wp-changer-fg; }
+#custom-updates { color: @updates-fg; }
+#backlight { color: @brightness-fg; }
+#pulseaudio { color: @audio-fg; }
+#network { color: @network-fg; }
+#battery { color: @battery-fg; }
+#custom-wlogout { color: @wlogout-fg; }
+#custom-swaync { color: @swaync-fg; }
+#custom-cpu { color: @cpu-fg; }
+#mpris { color: @mpris-fg; transition: 0.40s; }
+
+/* Modules states */
+#pulseaudio.muted { color: @audio-muted-fg; }
+#battery.warning { color: @battery-fg-warning; }
+#battery.critical { color: @battery-fg-critical; }
+#mpris.paused { color: @mpris-fg-paused; }
+
+tooltip {
+  background: @tooltip-bg;
+  border: 1px solid @tooltip-border;
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: @tooltip-fg;
+  font-size: 12px;
+  padding: 5px;
+}

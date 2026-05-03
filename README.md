@@ -24,6 +24,10 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 
 ![Waybar Style Screenshot 5](screenshots/5.png)
 
+<p align="center">6</p>
+
+![Waybar Style Screenshot 6](screenshots/6.png)
+
 ----
 
 ## Setup 
