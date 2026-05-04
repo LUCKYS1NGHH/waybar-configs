@@ -4,27 +4,27 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 
 ## Screenshots
 
-<p align="center">1</p>
+<p align="center">1 - Arctic Islands</p>
 
 ![Waybar Style Screenshot 1](screenshots/1.png)
 
-<p align="center">2</p>
+<p align="center">2 - Floating blocks</p>
 
 ![Waybar Style Screenshot 2](screenshots/2.png)
 
-<p align="center">3</p>
+<p align="center">3 - Pill Bar</p>
 
 ![Waybar Style Screenshot 3](screenshots/3.png)
 
-<p align="center">4</p>
+<p align="center">4 - Glass Islands</p>
 
 ![Waybar Style Screenshot 4](screenshots/4.png)
 
-<p align="center">5</p>
+<p align="center">5 - Monochrome strip</p>
 
 ![Waybar Style Screenshot 5](screenshots/5.png)
 
-<p align="center">6</p>
+<p align="center">6 - Chrome Gloss</p>
 
 ![Waybar Style Screenshot 6](screenshots/6.png)
 
