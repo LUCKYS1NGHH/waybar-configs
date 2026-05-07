@@ -33,7 +33,7 @@ window#waybar {
 #workspaces button.active {
     background: @workspace-button-active-bg;
     color: @workspace-button-active-fg;
-    padding: 0 23px;
+    padding: 0 20px;
 }
 
 #workspaces button:hover {
