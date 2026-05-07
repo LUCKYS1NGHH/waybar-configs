@@ -74,10 +74,10 @@ window#waybar {
 #custom-swaync { color: @swaync-fg; }
 #custom-wlogout { color: @wlogout-fg; }
 
-/* Volume highlight when muted */
-#pulseaudio.muted {
-  color: #e34d4d;
-}
+/* Modules states */
+#pulseaudio.muted { color: #e34d4d; }
+#battery.warning { color: @battery-fg-warning; }
+#battery.critical { color: @battery-fg-critical; }
 
 tooltip {
     background: rgba(27, 27, 36, 1);
