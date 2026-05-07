@@ -14,7 +14,7 @@ window#waybar {
 
 /* Workspaces */
 #workspaces {
-    padding: 0 2.5px;
+    padding: 0 2.2px;
     margin: 0 1px;
     background: @bg;
     border-radius: 18px;
@@ -22,23 +22,23 @@ window#waybar {
 
 #workspaces button {
     padding: 0 7px;
-    margin: 4.5px 2px;
+    margin: 4.4px 2px;
     border-radius: 15px;
     background: @workspace-button-bg;
     color: @workspace-button-fg;
-    transition: 0.23s;
+    transition: 0.22s;
 }
 
 #workspaces button.active {
     background: @workspace-button-active-bg;
     color: @workspace-button-active-fg;
-    padding: 0 22px;
+    padding: 0 18px;
 }
 
 #workspaces button:hover {
     background: @workspace-button-hover-bg;
     color: @workspace-button-hover-fg;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 #custom-distro-icon,
