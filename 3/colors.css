@@ -10,6 +10,9 @@
 @define-color audio-fg #5c85e6;
 @define-color audio-muted-fg #e6605c;
 
+@define-color mpris-fg #b5b5b5;
+@define-color mpris-fg-paused #9098a5;
+
 @define-color brightness-fg #e6c15c;
 
 @define-color battery-fg #7cdb7b;
@@ -34,6 +37,6 @@
 
 @define-color tooltip-bg #1a1a1a;
 @define-color tooltip-fg #cacfd0;
-@define-color tooltip-border #5c85e6;
+@define-color tooltip-border #688ee9;
 
 @define-color wp-changer-fg #bfbfbf;
