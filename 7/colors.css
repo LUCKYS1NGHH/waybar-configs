@@ -1,0 +1,21 @@
+@define-color bg rgba(66, 66, 66, 0.85);
+
+@define-color workspace-button-bg #2e3133;
+@define-color workspace-button-fg #2e3133;
+@define-color workspace-button-hover-bg #5876bc;
+@define-color workspace-button-hover-fg #5473be;
+@define-color workspace-button-active-bg #688ee9;
+@define-color workspace-button-active-fg #5473be;
+
+@define-color accent #c0c0c0;
+
+@define-color audio-muted-fg #e6605c;
+
+@define-color battery-fg-warning #f9d175;
+@define-color battery-fg-critical #f5524d;
+
+@define-color arch-glow #769bf3;
+
+@define-color tooltip-bg #1a1a1a;
+@define-color tooltip-fg #cacfd0;
+@define-color tooltip-border #688ee9;

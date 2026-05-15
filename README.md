@@ -28,9 +28,13 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 
 ![Floating rounded blocks, rounded block/rectangle workspaces, a bit transparent dark-gray BG, colorful icons](screenshots/6.png)
 
+<p align="center">7 - Wraith</p>
+
+![3 modules in left side included workspaces, other modules icon in right, a bit transparent dark-gray BG with, light-gray icons](screenshots/7.png)
+
 ----
 
-## Setup 
+## Setup
 ```bash
 git clone https://github.com/LUCKYS1NGHH/waybar-configs.git
 cd waybar-configs
