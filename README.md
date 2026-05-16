@@ -49,4 +49,4 @@ cp -r 1/* ~/.config/waybar/
 ```
 
 > [!NOTE]
-There are few configs like `3` and `4` which have scripts (e.g., `waybar-wttr.py`, `wallpaper-changer.sh`) need to configure a little bit, for example city name for weather and directory path of wallpapers.
+There are few configs like `3` and `4` which have scripts (e.g., `waybar-wttr.py`, `wallpaper-changer.sh`) need to configure a little bit, for example city name for weather and directory path of wallpapers. Also you configure anything you don't like, for example the margin-top/bottom/left/right of the waybar.
