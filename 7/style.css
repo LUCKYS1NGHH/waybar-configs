@@ -78,6 +78,7 @@ window#waybar {
 #custom-cpu_temp.high { color: @cpu-temp-high; }
 #custom-cpu_temp.mid { color: @cpu-temp-mid; }
 #custom-cpu_temp.low { color: @cpu-temp-low; }
+#custom-swaync.dnd-notification { color: @swaync-noti-dnd; }
 
 tooltip {
   background: @tooltip-bg;
