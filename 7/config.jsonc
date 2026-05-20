@@ -53,6 +53,14 @@
     "escape": true
   },
 
+  "custom/cpu_temp": {
+    "format": "{}",
+    "interval": 5,
+    "exec-if": "which sensors",
+    "exec": "~/.config/waybar/scripts/cpu-temp.sh",
+    "return-type": "json"
+  },
+
   "modules-left": [
     "custom/arch",
     "clock",
@@ -61,6 +69,7 @@
 
   "modules-right": [
     "tray",
+    "custom/cpu_temp",
     "custom/updates",
     "backlight",
     "pulseaudio",
