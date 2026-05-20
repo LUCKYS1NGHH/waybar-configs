@@ -58,7 +58,9 @@
     "interval": 5,
     "exec-if": "which sensors",
     "exec": "~/.config/waybar/scripts/cpu-temp.sh",
-    "return-type": "json"
+    "return-type": "json",
+    "tooltip": true,
+    "tooltip-format": "CPU temperature {}"
   },
 
   "modules-left": [
