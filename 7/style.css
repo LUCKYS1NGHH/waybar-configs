@@ -24,7 +24,7 @@ window#waybar {
 }
 
 #workspaces button {
-    margin: 4px 2px;
+    margin: 4px 3px;
     padding: 0 3.5px;
     min-width: 8px;
     min-height: 10px;
@@ -35,18 +35,14 @@ window#waybar {
 }
 
 #workspaces button.active {
-    min-width: 35px;
-    min-height: 8px;
-    border-radius: 99px;
+    min-width: 32px;
     background: @workspace-button-active-bg;
-    color: transparent;
-    padding: 0;
 }
 
 #workspaces button:hover {
     background: @workspace-button-hover-bg;
     color: @workspace-button-hover-fg;
-    min-width: 42px;
+    min-width: 25px;
 }
 
 #tray,

@@ -27,7 +27,7 @@
   },
 
   "hyprland/workspaces": {
-    "format": "●",
+    "format": "",
     "persistent-workspaces": {
       "*": 3
     }
