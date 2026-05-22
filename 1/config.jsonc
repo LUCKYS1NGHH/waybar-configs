@@ -50,6 +50,15 @@
 
   "clock": {
     "format": "  {:%I:%M %p %a}"
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "weeks-pos": "left",
+        "format": {
+            "today": "<span color='#ff5555'><b>{}</b></span>"
+        }
+    }
   },
 
   "pulseaudio": {

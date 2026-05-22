@@ -95,13 +95,17 @@
 
   "clock": {
     "format": "󰥔 {:%H:%M %d, %b %Y}",
-    "tooltip-format": "<tt><span font='FiraCode 10'><small>{calendar}</small></span></tt>",
+    "tooltip-format": "<span font_size='15pt'>{calendar}</span>",
     "calendar": {
         "mode": "month",
         "mode-mon-col": 3,
-        "weeks-pos": "right",
+        "weeks-pos": "left",
         "format": {
-            "today": "<span color='#ff4e4e'><b>{}</b></span>"
+            "months":   "<span color='#cdd6f4' font_size='8pt'><b>{}</b></span>",
+            "days":     "<span color='#aeb4cd' font_size='8pt'>{}</span>",
+            "weeks":    "<span color='#4f4f4f' font_size='8pt'><b>W{}</b></span>",
+            "weekdays": "<span color='#83b2ff' font_size='8pt'><b>{}</b></span>",
+            "today":    "<span color='#ff4d4d' font_size='8pt'><b><u>{}</u></b></span>"
         }
     }
   },
