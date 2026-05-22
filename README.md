@@ -36,6 +36,10 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 
 ![Single top attached bar, gray pill shape workspaces, dark-gray BG, colorful icons](screenshots/8.png)
 
+<p align="center">9 - Happy Blocks</p>
+
+![3 modules in left side included workspaces, other modules icon in right, colorful BG pills shape modules](screenshots/9.png)
+
 ----
 
 ## Setup

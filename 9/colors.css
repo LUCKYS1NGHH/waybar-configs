@@ -1,0 +1,39 @@
+@define-color bg rgba(66, 66, 66, 0.7);
+
+@define-color workspace-bg #727272;
+@define-color workspace-button-bg #4b4b4b;
+@define-color workspace-button-hover-bg #5876bc;
+@define-color workspace-button-active-bg #688ee9;
+
+@define-color fg #000000;
+
+@define-color bg-clock     #84a4d1;
+@define-color bg-backlight #d1c984;
+@define-color bg-audio     #8495d1;
+@define-color bg-network   #bb84d1;
+@define-color bg-battery   #84d18a;
+@define-color bg-updates   #84c0d1;
+@define-color bg-arch      #7f99c2;
+@define-color bg-tray      #8a8a8a;
+@define-color bg-cpu-temp  #8a8a8a;
+@define-color bg-wlogout   #848484;
+@define-color bg-swaync    #d1b684;
+
+@define-color accent #c1c1c1;
+
+@define-color audio-muted-fg #ec8784;
+
+@define-color battery-fg-warning #e6ce98;
+@define-color battery-fg-critical #ec938f;
+
+@define-color arch-glow #769bf3;
+
+@define-color tooltip-bg #1a1a1a;
+@define-color tooltip-fg #cacfd0;
+@define-color tooltip-border #688ee9;
+
+@define-color cpu-temp-high #e39c9c;
+@define-color cpu-temp-mid #cfcea8;
+@define-color cpu-temp-low #b1c6d3;
+
+@define-color swaync-noti-dnd #a5a3cc;

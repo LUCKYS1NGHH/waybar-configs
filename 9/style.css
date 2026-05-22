@@ -1,0 +1,101 @@
+@import 'colors.css';
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "FiraCode Nerd Font Propo", "Noto Sans CJK TC Medium", sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+    margin: 1px 1px 0 1px;
+    transition: 0.20s;
+    border-radius: 9px;
+}
+
+/* Workspaces */
+#workspaces {
+    background: @workspace-bg;
+    border-radius: 9px;
+    padding: 0 2px;
+}
+
+#workspaces button {
+    margin: 4px 2.5px;
+    padding: 0 3.5px;
+    min-width: 8px;
+    min-height: 10px;
+    border-radius: 6.5px;
+    background: @workspace-button-bg;
+    color: transparent;
+    transition: all 0.21s ease;
+}
+
+#workspaces button.active {
+    min-width: 32px;
+    background: @workspace-button-active-bg;
+}
+
+#workspaces button:hover {
+    background: @workspace-button-hover-bg;
+    color: @workspace-button-hover-fg;
+    min-width: 25px;
+}
+
+#tray,
+#clock,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#mpris,
+#custom-updates,
+#custom-cpu_temp,
+#custom-arch,
+#custom-wlogout,
+#custom-swaync {
+  padding: 0 9px;
+  border-radius: 9px;    /* rounded box */
+  margin: 0 6px;
+  color: @accent;
+}
+
+#tray               { background: @bg-tray      ; color: @fg; }
+#clock              { background: @bg-clock     ; color: @fg; }
+#backlight          { background: @bg-backlight ; color: @fg; }
+#pulseaudio         { background: @bg-audio     ; color: @fg; }
+#network            { background: @bg-network   ; color: @fg; }
+#battery            { background: @bg-battery   ; color: @fg; }
+#custom-updates     { background: @bg-updates   ; color: @fg; }
+#custom-cpu_temp    { background: @bg-cpu-temp  ; color: @fg; }
+#custom-arch        { background: @bg-arch      ; color: @fg; }
+#custom-wlogout     { background: @bg-wlogout   ; color: @fg; }
+#custom-swaync      { background: @bg-swaync    ; color: @fg; }
+
+#custom-arch { transition: 0.50s; }
+#custom-arch:hover { color: @arch-glow; }
+
+/* Modules states */
+#pulseaudio.muted { background: @audio-muted-fg; }
+#battery.warning { background: @battery-fg-warning; }
+#battery.critical { background: @battery-fg-critical; }
+#custom-cpu_temp.high { background: @cpu-temp-high; }
+#custom-cpu_temp.mid { background: @cpu-temp-mid; }
+#custom-cpu_temp.low { background: @cpu-temp-low; }
+#custom-swaync.dnd-notification { background: @swaync-noti-dnd; }
+
+tooltip {
+  background: @tooltip-bg;
+  border: 1px solid @tooltip-border;
+  border-radius: 8px;
+  font-family: "JetBrainsMono Nerd Font Propo";
+}
+
+tooltip label {
+  color: @tooltip-fg;
+  font-size: 10px;
+  padding: 5px;
+}

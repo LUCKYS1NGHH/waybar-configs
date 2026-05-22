@@ -1,0 +1,145 @@
+{
+  "position": "top",
+  "gtk-layer-shell": true,
+  "exclusive": true,
+  "height": 20,
+  "margin-left": 7,
+  "margin-top": 10,
+  "margin-right": 7,
+
+  "custom/arch": {
+     "format": "",
+      "tooltip-format": "Arch Linux (Hyprland)"
+  },
+
+  "custom/wlogout": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": true,
+    "tooltip-format": "wlogout"
+  },
+
+  "custom/updates": {
+    "exec": "checkupdates | wc -l",
+    "interval": 620,
+    "format": "󰏖 {}",
+    "tooltip-format": "{} updates available"
+  },
+
+  "hyprland/workspaces": {
+    "format": "",
+    "persistent-workspaces": {
+      "*": 3
+    }
+  },
+
+  "custom/swaync": {
+    "format": "{icon}{text}",
+    "format-icons": {
+        "notification": "󰂚 ",
+        "none": "󰂜 ",
+        "dnd-notification": "󰂛 ",
+        "dnd-none": "󰂛 ",
+        "inhibited-notification": "󰂚 ",
+        "inhibited-none": "󰂜 "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click-middle": "swaync-client -C -sw",
+    "tooltip": true,
+    "escape": true
+  },
+
+  "custom/cpu_temp": {
+    "format": "{}",
+    "interval": 5,
+    "exec-if": "which sensors",
+    "exec": "~/.config/waybar/scripts/cpu-temp.sh",
+    "return-type": "json",
+    "tooltip": true,
+    "tooltip-format": "CPU temperature {}"
+  },
+
+  "modules-left": [
+    "custom/arch",
+    "clock",
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/cpu_temp",
+    "custom/updates",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "battery",
+    "custom/swaync",
+    "custom/wlogout"
+  ],
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "<span font_size='15pt'>{calendar}</span>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "weeks-pos": "left",
+        "format": {
+            "months":   "<span color='#cdd6f4' font_size='8pt'><b>{}</b></span>",
+            "days":     "<span color='#aeb4cd' font_size='8pt'>{}</span>",
+            "weeks":    "<span color='#4f4f4f' font_size='8pt'><b>W{}</b></span>",
+            "weekdays": "<span color='#83b2ff' font_size='8pt'><b>{}</b></span>",
+            "today":    "<span color='#ff4d4d' font_size='8pt'><b><u>{}</u></b></span>"
+        }
+    }
+  },
+
+  "pulseaudio": {
+    "format": "󰕾 {volume}%",
+    "format-muted": " muted",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰤢 {}",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "exec": "iwgetid -r",
+    "format-linked": "󰈀 {ifname} {No IP}",
+    "format-disconnected": " Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "on-click": "nm-applet"
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": " {percent}%",
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +2%",
+    "on-scroll-down": "brightnessctl set 2%-",
+  },
+
+  "battery": {
+    "format": "{icon}{capacity}%",
+    "format-charging": "󱐋 {capacity}%",
+    "format-full": " 100%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "states": {
+      "good": 85,
+      "warning": 30,
+      "critical": 15
+    }
+  }
+}
