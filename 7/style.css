@@ -21,6 +21,7 @@ window#waybar {
     background: @bg;
     border-radius: 12px;
     padding: 0 2px;
+    margin-left: 3px;
 }
 
 #workspaces button {
@@ -54,13 +55,14 @@ window#waybar {
 #mpris,
 #custom-updates,
 #custom-cpu_temp,
+#custom-weather,
 #custom-arch,
 #custom-wlogout,
 #custom-swaync {
   padding: 0 8px;
   background: @bg;    /* module box color */
   border-radius: 12px;    /* rounded box */
-  margin: 0 5px;
+  margin: 0 3px;
   color: @accent;
 }
 

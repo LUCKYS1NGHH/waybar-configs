@@ -63,6 +63,14 @@
     "tooltip-format": "CPU temperature {}"
   },
 
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 3600,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+
   "modules-left": [
     "custom/arch",
     "clock",
@@ -72,6 +80,7 @@
   "modules-right": [
     "tray",
     "custom/cpu_temp",
+    "custom/weather",
     "custom/updates",
     "backlight",
     "pulseaudio",
