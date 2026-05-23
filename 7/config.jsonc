@@ -113,7 +113,7 @@
     "exec": "iwgetid -r",
     "format-linked": "󰈀 {ifname} {No IP}",
     "format-disconnected": " Disconnected",
-    "tooltip-format": "{ifname} via {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "tooltip-format": "Network: {}\nInterface: {ifname}\nGateway: {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
     "on-click": "nm-applet"
   },
 
