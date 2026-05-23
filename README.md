@@ -46,15 +46,25 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 ```bash
 git clone https://github.com/LUCKYS1NGHH/waybar-configs.git
 cd waybar-configs
-mkdir -p ~/.config/waybar
+mv ~/.config/waybar ~/.config/waybar.bak
 ```
 
-> Choose the style you liked in screenshots and copy-paste that directory,
-> Example:
+Pick a style from the screenshots, then either **copy** it or **symlink** it:
 
+**Copy** (one-time):
 ```bash
+mkdir -p ~/.config/waybar
 cp -r 1/* ~/.config/waybar/
 ```
+
+**Symlink** (changes in the repo reflect instantly):
+```bash
+ln -sfn $HOME/waybar-configs/3 ~/.config/waybar
+pkill -SIGUSR2 waybar  # reload config
+```
+
+> [!TIP]
+> Symlink is the better move, switching themes later is just one `ln -sfn` away, no copying needed, but make sure you give full path (absolute path) of the config, otherwise you won't see the change because of the broken link.
 
 > [!NOTE]
 There are few configs like `3` and `4` which have scripts (e.g., `waybar-wttr.py`, `wallpaper-changer.sh`) need to configure a little bit, for example city name for weather and directory path of wallpapers. Also you configure anything you don't like, for example the margin-top/bottom/left/right of the waybar.
