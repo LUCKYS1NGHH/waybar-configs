@@ -30,7 +30,7 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 
 <p align="center">7 - Wraith</p>
 
-![3 modules in left side included workspaces, other modules icon in right, a bit transparent dark-gray BG with, light-gray icons](screenshots/7.png)
+![3 modules in left side included workspaces, other modules icon in right, a bit transparent dark-gray BG, light-gray icons](screenshots/7.png)
 
 <p align="center">8 - Attached Bar</p>
 
@@ -39,6 +39,10 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 <p align="center">9 - Happy Blocks</p>
 
 ![3 modules in left side included workspaces, other modules icon in right, colorful BG pills shape modules](screenshots/9.png)
+
+<p align="center">10 - Chrome Pills</p>
+
+![2 modules in left side, cyan-gray workspaces with swaync and weather, single island of multiple modules, a bit transparent dark-gray BG](screenshots/10.png)
 
 ----
 

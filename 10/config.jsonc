@@ -1,0 +1,124 @@
+{
+  "position": "top",
+  "gtk-layer-shell": true,
+  "exclusive": true,
+  "height": 20,
+  "margin-left": 9,
+  "margin-top": 10,
+  "margin-right": 9,
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "custom/weather": {
+    "tooltip": true,
+    "format": "{}",
+    "interval": 3600,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+
+  "custom/swaync": {
+    "format": "{icon} {text} ",
+    "format-icons": {
+        "notification": "󰂚",
+        "none": "󰂜",
+        "dnd-notification": "󰂛 ",
+        "dnd-none": "󰂛",
+        "inhibited-notification": "󰂚",
+        "inhibited-none": "󰂜"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click-middle": "swaync-client -C -sw",
+    "tooltip": true,
+    "escape": true
+  },
+
+  "modules-left": [
+    "clock",
+    "network"
+  ],
+
+  "modules-center": [
+    "custom/weather",
+    "hyprland/workspaces",
+    "custom/swaync"
+  ],
+
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "backlight",
+    "battery",
+  ],
+
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    "tooltip-format": "<span font_size='15pt'>{calendar}</span>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "weeks-pos": "left",
+        "format": {
+            "months":   "<span color='#cdd6f4' font_size='8pt'><b>{}</b></span>",
+            "days":     "<span color='#aeb4cd' font_size='8pt'>{}</span>",
+            "weeks":    "<span color='#4f4f4f' font_size='8pt'><b>W{}</b></span>",
+            "weekdays": "<span color='#83b2ff' font_size='8pt'><b>{}</b></span>",
+            "today":    "<span color='#ff4d4d' font_size='8pt'><b><u>{}</u></b></span>"
+        }
+    }
+  },
+
+  "pulseaudio": {
+    "format": "󰕾",
+    "format-muted": "",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": "󰤨 {}",
+    "format-ethernet": "󰈀 {}",
+    "exec": "iwgetid -r",
+    "format-linked": "󰈀 {}",
+    "format-disconnected": " No internet",
+    "tooltip-format": "Network: {}\nInterface: {ifname}\nGateway: {gwaddr}\nIP: {ipaddr}\nStrength: {signalStrength}%",
+    "on-click": "nm-applet"
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "󰖨",
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set +3%",
+    "on-scroll-down": "brightnessctl set 3%-",
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "format-charging": "{icon} 󱐋",
+    "format-full": "󰁹",
+    "format-icons": [
+      "󰁻",
+      "󰁽",
+      "󰁿",
+      "󰂂",
+      "󰁹"
+    ],
+    "states": {
+      "good": 85,
+      "warning": 30,
+      "critical": 15
+    }
+  }
+}

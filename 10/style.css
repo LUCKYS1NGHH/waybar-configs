@@ -1,0 +1,92 @@
+@import 'colors.css';
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "FiraCode Nerd Font Propo", "Noto Sans CJK TC Medium", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+    margin: 1px 1px 0 1px;
+    transition: 0.22s;
+}
+
+/* Workspaces */
+
+#workspaces {
+    background: @bg;
+    border-radius: 10px;
+    padding: 0 3px;
+}
+
+#workspaces button {
+    margin: 3.5px 3px;
+    padding: 0 3.5px;
+    min-width: 8px;
+    min-height: 10.5px;
+    border-radius: 99px;
+    background: @workspace-button-bg;
+    color: transparent;
+    transition: all 0.21s ease;
+}
+
+#workspaces button.active {
+    min-width: 30px;
+    color: @workspace-button-active-fg;
+    background: @workspace-button-active-bg;
+}
+
+#workspaces button:hover {
+    color: @workspace-button-hover-fg;
+    background: @workspace-button-hover-bg;
+    min-width: 22px;
+}
+
+#tray,
+#clock,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#custom-weather,
+#custom-swaync {
+  padding: 0 9px;
+  background: @bg;    /* module box color */
+  color: @accent;
+}
+
+/* Border radius and few extra adjusments */
+#clock { border-radius: 10px; padding: 0 10px; }
+#custom-weather { border-radius: 10px 0 0 10px; }
+#battery { border-radius: 0 10px 10px 0; }
+#tray { border-radius: 10px 0 0 10px; }
+#network { border-radius: 10px; }
+#custom-weather { border-radius: 12px 0 0 12px; }
+#workspaces { border-radius: 0 0 0 0; }
+#custom-swaync { border-radius: 0 12px 12px 0; }
+
+/* other adjusments*/
+#clock, #network { margin: 0 3px; }
+
+/* Modules states */
+#pulseaudio.muted { color: @audio-muted-fg; }
+#battery.warning { color: @battery-fg-warning; }
+#battery.critical { color: @battery-fg-critical; }
+#custom-swaync.dnd-notification { color: @swaync-noti-dnd; }
+
+tooltip {
+  background: @tooltip-bg;
+  border: 1px solid @tooltip-border;
+  border-radius: 8px;
+  font-family: "JetBrainsMono Nerd Font Propo";
+}
+
+tooltip label {
+  color: @tooltip-fg;
+  font-size: 12px;
+  padding: 5px;
+}
