@@ -80,8 +80,8 @@ window#waybar {
 
 tooltip {
   background: @tooltip-bg;
-  border: 1px solid @tooltip-border;
-  border-radius: 8px;
+  border: none;
+  border-radius: 10px;
   font-family: "JetBrainsMono Nerd Font Propo";
 }
 

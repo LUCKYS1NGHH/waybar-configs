@@ -13,9 +13,8 @@
 
 @define-color arch-glow #769bf3;
 
-@define-color tooltip-bg #1a1a1a;
+@define-color tooltip-bg #252525;
 @define-color tooltip-fg #cacfd0;
-@define-color tooltip-border #688ee9;
 
 @define-color cpu-temp-high #e39c9c;
 @define-color cpu-temp-mid #cfcea8;
