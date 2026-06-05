@@ -1,0 +1,78 @@
+@import 'colors.css';
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", "FiraCode Nerd Font Propo", "Noto Sans CJK TC Medium", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: transparent;
+    margin: 5px 5px 0 5px;
+    transition: 0.22s;
+    padding: 0 5px;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 2.5px;
+    background: @bg;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    margin: 5.5px 2px;
+    min-height: 18px;
+    border-radius: 15px;
+    background: @workspace-button-bg;
+    color: @workspace-button-fg;
+    transition: 0.23s;
+}
+
+#workspaces button.active {
+    background: @workspace-button-active-bg;
+    color: @workspace-button-active-fg;
+    min-width: 40px;
+}
+
+#workspaces button:hover {
+    background: @workspace-button-hover-bg;
+    color: @workspace-button-hover-fg;
+    min-width: 30px;
+}
+
+#tray,
+#backlight,
+#clock,
+#pulseaudio,
+#network,
+#battery {
+  padding: 0 10px;
+  background: @bg;    /* module box color */
+  border-radius: 0;    /* rounded box */
+  color: @accent;
+}
+
+/* left-right modules border radius */
+#clock { border-radius: 20px 0 0 20px; }
+#battery { border-radius: 0 20px 20px 0; }
+
+/* Modules states */
+#pulseaudio.muted { color: @audio-muted-fg; }
+#battery.warning { color: @battery-fg-warning; }
+#battery.critical { color: @battery-fg-critical; }
+
+tooltip {
+  background: @tooltip-bg;
+  border: none;
+  border-radius: 10px;
+}
+
+tooltip label {
+  color: @tooltip-fg;
+  font-size: 12px;
+  padding: 5px;
+}

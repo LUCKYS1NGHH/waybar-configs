@@ -44,6 +44,10 @@ My Waybar configuration files for Arch Linux + Hyprland Setup
 
 ![2 modules in left side, cyan-gray workspaces with swaync and weather, single island of multiple modules, a bit transparent dark-gray BG](screenshots/10.png)
 
+<p align="center">11 - Chill Pill</p>
+
+![clock in left, workspaces, few basic utility status like brightness, audio, network, tray and battery](screenshots/11.png)
+
 ----
 
 ## Setup
