@@ -41,7 +41,7 @@ window#waybar {
 #workspaces button:hover {
     background: @workspace-button-hover-bg;
     color: @workspace-button-hover-fg;
-    min-width: 30px;
+    min-width: 33px;
 }
 
 #tray,
