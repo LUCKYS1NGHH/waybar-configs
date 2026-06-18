@@ -23,8 +23,8 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 2px;
-    margin: 5.5px 2px;
+    padding: 0 1px;
+    margin: 5.4px 2.5px;
     min-height: 18px;
     border-radius: 15px;
     background: @workspace-button-bg;

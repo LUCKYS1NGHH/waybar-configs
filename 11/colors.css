@@ -1,7 +1,7 @@
 @define-color bg rgba(15, 15, 15, 0.8);
 
-@define-color workspace-button-bg #393b3b;
-@define-color workspace-button-fg #8698aa;
+@define-color workspace-button-bg #3f4141;
+@define-color workspace-button-fg #97a0aa;
 @define-color workspace-button-hover-bg #656c71;
 @define-color workspace-button-hover-fg #ffffff;
 @define-color workspace-button-active-bg #7c8287;
